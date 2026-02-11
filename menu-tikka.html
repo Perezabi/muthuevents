@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tikka Variety • Muthu Events</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tikka Variety • Muthu Events</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 </head>
+
 <body class="dark-theme">
 
-<nav class="navbar navbar-dark glass-nav shadow border-bottom border-warning">
-    <div class="container">
-        <a class="navbar-brand text-warning fw-bold" href="index.html">
-            <i class="bi bi-arrow-left-circle me-2"></i> Back
-        </a>
+    <nav class="navbar navbar-dark glass-nav shadow border-bottom border-warning">
+        <div class="container">
+            <a class="navbar-brand text-warning fw-bold" href="index.html">
+                <i class="bi bi-arrow-left-circle me-2"></i> Back
+            </a>
+        </div>
+    </nav>
+
+    <header class="menu-banner" style="background-image:url('images/tikka-banner.jpg')">
+        <div class="overlay"></div>
+        <h1 class="text-warning fw-bold">Tikka Variety</h1>
+    </header>
+
+    <div class="container py-5">
+
+        <div class="glass-section" data-aos="fade-up">
+            <h2 class="text-warning mb-3">🔥 Tikka Items</h2>
+            <ul class="menu-list">
+                <li>Paneer Tikka</li>
+                <li>Sweet Potato Tikka</li>
+                <li>Mixed Veg Tikka</li>
+                <li>Panang Kizhanghu Tikka</li>
+                <li>Chicken Tikka</li>
+            </ul>
+        </div>
+
+        <div class="glass-section" data-aos="fade-up">
+            <h2 class="text-warning mb-3">🥚 Egg Items</h2>
+            <ul class="menu-list">
+                <li>Spring Egg</li>
+                <li>Kadai Egg</li>
+                <li>Egg Omelette</li>
+                <li>Egg Roll</li>
+                <li>Masala Omelette</li>
+                <li>Egg Tikka Masala</li>
+                <li>Egg Bhurji</li>
+            </ul>
+        </div>
+
+        <div class="glass-section" data-aos="fade-up">
+            <h2 class="text-warning mb-3">🌽 Corn Items</h2>
+            <ul class="menu-list">
+                <li>Sweet Corn</li>
+                <li>Paneer Corn</li>
+            </ul>
+        </div>
+
     </div>
-</nav>
 
-<header class="menu-banner" style="background-image:url('images/tikka-banner.jpg')">
-    <div class="overlay"></div>
-    <h1 class="text-warning fw-bold">Tikka Variety</h1>
-</header>
+    <footer class="text-center text-light py-3 bg-black border-top border-warning">
+        © 2026 Muthu Events
+    </footer>
 
-<div class="container py-5">
-
-    <div class="glass-section" data-aos="fade-up">
-        <h2 class="text-warning mb-3">🔥 Tikka Items</h2>
-        <ul class="menu-list">
-            <li>Paneer Tikka</li>
-            <li>Sweet Potato Tikka</li>
-            <li>Mixed Veg Tikka</li>
-            <li>Panang Kizhanghu Tikka</li>
-            <li>Chicken Tikka</li>
-        </ul>
-    </div>
-
-    <div class="glass-section" data-aos="fade-up">
-        <h2 class="text-warning mb-3">🥚 Egg Items</h2>
-        <ul class="menu-list">
-            <li>Spring Egg</li>
-            <li>Kadai Egg</li>
-            <li>Egg Omelette</li>
-            <li>Egg Roll</li>
-            <li>Masala Omelette</li>
-            <li>Egg Tikka Masala</li>
-            <li>Egg Bhurji</li>
-        </ul>
-    </div>
-
-    <div class="glass-section" data-aos="fade-up">
-        <h2 class="text-warning mb-3">🌽 Corn Items</h2>
-        <ul class="menu-list">
-            <li>Sweet Corn</li>
-            <li>Paneer Corn</li>
-        </ul>
-    </div>
-
-</div>
-
-<footer class="text-center text-light py-3 bg-black border-top border-warning">
-    © 2026 Muthu Events
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({ duration: 900 });
-gsap.from(".menu-banner h1", { opacity: 0, y: -40, duration: 1.2 });
-</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900 });
+        gsap.from(".menu-banner h1", { opacity: 0, y: -40, duration: 1.2 });
+    </script>
 
 </body>
+
 </html>
