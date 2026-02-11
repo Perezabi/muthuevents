@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Potato Variety • Muthu Events</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</head>
+<body class="dark-theme">
+
+<nav class="navbar navbar-dark glass-nav shadow border-bottom border-warning">
+    <div class="container">
+        <a class="navbar-brand text-warning fw-bold" href="index.html">
+            <i class="bi bi-arrow-left-circle me-2"></i> Back
+        </a>
+    </div>
+</nav>
+
+<header class="menu-banner" style="background-image:url('images/potato-banner.jpg')">
+    <div class="overlay"></div>
+    <h1 class="text-warning fw-bold">Potato Variety</h1>
+</header>
+
+<div class="container py-5">
+
+    <div class="glass-section" data-aos="zoom-in">
+        <h2 class="text-warning mb-3">🍟 Potato Items</h2>
+        <ul class="menu-list">
+            <li>Spring Potato</li>
+            <li>French Fries</li>
+            <li>Potato Nuggets</li>
+            <li>Chilli Potato</li>
+            <li>Kung-Fu Fries</li>
+            <li>Potato Wedges</li>
+            <li>Potato Bites</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer class="text-center text-light py-3 bg-black border-top border-warning">
+    © 2026 Muthu Events
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 900 });
+gsap.from(".menu-banner h1", { opacity: 0, y: -40, duration: 1.2 });
+</script>
+
+</body>
+</html>

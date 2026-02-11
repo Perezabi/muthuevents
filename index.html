@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muthu Events • Premium Glass UI</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark-theme">
+  <!-- NAVBAR (Glass) -->
+  <nav class="navbar navbar-expand-lg glass-nav fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center text-warning fw-bold" href="#home">
+        <img src="images/muthu-logo.jpg" width="55" class="me-2" />
+        Muthu Events
+      </a>
+
+      <button class="navbar-toggler bg-warning" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#home" class="nav-link text-warning">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link text-warning">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link text-warning">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#menu" class="nav-link text-warning">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#gallery" class="nav-link text-warning">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a href="booking.html" class="nav-link text-warning">Booking</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link text-warning">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (Glass Layer) -->
+  <section id="home" class="hero-section d-flex align-items-center text-center">
+    <div class="glass-hero p-5">
+      <h1 class="display-4 fw-bold text-warning">Muthu Events</h1>
+      <p class="lead text-light">
+        Making Your Events Special & Unforgettable
+      </p>
+      <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mt-3">
+        <a href="#menu" class="btn btn-warning btn-lg">Explore Menu</a>
+        <a href="booking.html" class="btn btn-outline-warning btn-lg">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5 bg-black text-light">
+    <div class="container">
+      <div class="glass-box p-4">
+        <h2 class="text-center text-warning mb-4">About Us</h2>
+        <p class="text-center fs-5">
+          We provide premium food counters, ice creams, snacks, beverages,
+          live stations & entertainment games for all events in a professional
+          setup.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-5 bg-dark text-light">
+    <div class="container">
+      <h2 class="text-center text-warning mb-5">Our Premium Services</h2>
+
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="glass-box p-4">
+            <i class="bi bi-balloon-heart fs-1 text-warning"></i>
+            <h4 class="mt-3 text-warning">Party Events</h4>
+            <p>Decor, lighting, stalls & premium setups</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="glass-box p-4">
+            <i class="bi bi-cup-straw fs-1 text-warning"></i>
+            <h4 class="mt-3 text-warning">Snacks & Counters</h4>
+            <p>Beverages, shakes, falooda, fries & live stations</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="glass-box p-4">
+            <i class="bi bi-controller fs-1 text-warning"></i>
+            <h4 class="mt-3 text-warning">Fun Games</h4>
+            <p>Target, accuracy & skill-based games</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU CATEGORIES (Glass Cards) -->
+  <section id="menu" class="py-5 bg-black text-light">
+    <div class="container">
+      <h2 class="text-center text-warning mb-4">Menu Categories</h2>
+
+      <div class="row g-4">
+        <div class="col-md-3">
+          <a href="menu-beverages.html">
+            <div class="glass-card">
+              <img src="images/beverages.png" />
+              <h5>Beverages</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="menu-icecream.html">
+            <div class="glass-card">
+              <img src="images/icecream.png" />
+              <h5>Ice Cream</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="menu-panipoori.html">
+            <div class="glass-card">
+              <img src="images/pani poori.png" />
+              <h5>Pani Poori</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="menu-potato.html">
+            <div class="glass-card">
+              <img src="images/potatovariety.png" />
+              <h5>Potato</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="menu" class="py-5 bg-black text-light">
+    <div class="container">
+      <!-- <h2 class="text-center text-warning mb-4">Menu Categories</h2> -->
+
+      <div class="row g-4">
+        <div class="col-md-3">
+          <a href="menu-beeda.html">
+            <div class="glass-card">
+              <img src="images/beeda.png" />
+              <h5>Beeda</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="menu-momos.html">
+            <div class="glass-card">
+              <img src="images/momo.png" />
+              <h5>Momos</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="menu-popcorn.html">
+            <div class="glass-card">
+              <img src="images/pop corn.png" />
+              <h5>PopCorn</h5>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-3">
+          <a href="menu-tikka.html">
+            <div class="glass-card">
+              <img src="images/tikka.png" />
+              <h5>Tikka</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY (Glass Borders) -->
+  <section id="gallery" class="py-5 bg-dark">
+    <div class="container">
+      <h2 class="text-center text-warning mb-4">Gallery</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="images/g1.jpg" class="glass-img" />
+        </div>
+        <div class="col-md-4">
+          <img src="images/g2.jpg" class="glass-img" />
+        </div>
+        <div class="col-md-4">
+          <img src="images/g3.jpg" class="glass-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT (NO FORM) -->
+  <section id="contact" class="py-5 bg-black text-light">
+    <div class="container">
+      <div class="glass-box p-4 text-center">
+        <h2 class="text-warning mb-3">Contact</h2>
+        <p class="fs-4">📞 +91 75025 70259</p>
+        <p class="fs-5">📍 Kaliyayanviali Rd, Ethamozhi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-center text-light py-3 border-top border-warning">
+    © 2026 Muthu Events | All Rights Reserved
+  </footer>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900 });
+  </script>
+
+  <!-- GSAP HERO ANIMATION -->
+  <script>
+    gsap.from(".menu-banner h1", {
+      opacity: 0,
+      y: -50,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+
+    gsap.from(".menu-list li", {
+      scrollTrigger: ".menu-list",
+      opacity: 0,
+      x: -40,
+      stagger: 0.15,
+      duration: 0.8,
+    });
+  </script>
+</body>
+
+</html>

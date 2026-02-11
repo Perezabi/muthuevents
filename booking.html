@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muthu Events | Booking</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <style>
+      .booking-box {
+        max-width: 600px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 20px;
+        padding: 30px;
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        backdrop-filter: blur(10px);
+      }
+
+      .booking-input {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 215, 0, 0.2);
+        color: white;
+      }
+      .booking-input::placeholder {
+        color: #bbb;
+      }
+
+      .qr-box {
+        background: rgba(255, 255, 255, 0.07);
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        text-align: center;
+      }
+      .qr-box img {
+        width: 180px;
+      }
+    </style>
+  </head>
+
+  <body class="dark-theme">
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-dark glass-nav shadow border-bottom border-warning"
+    >
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand text-warning fw-bold" href="index.html">
+          <i class="bi bi-arrow-left-circle me-2"></i> Back Home
+        </a>
+        <div class="d-flex gap-2">
+          <a href="index.html#menu" class="btn btn-outline-warning btn-sm">
+            <i class="bi bi-grid me-1"></i> Menu
+          </a>
+          <a
+            href="https://wa.me/917502570259"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-warning btn-sm"
+          >
+            <i class="bi bi-whatsapp me-1"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BANNER -->
+    <header
+      class="menu-banner"
+      style="background-image: url(&quot;images/booking-banner.jpg&quot;)"
+    >
+      <div class="overlay"></div>
+      <h1 class="text-warning fw-bold">Event Booking</h1>
+    </header>
+
+    <!-- BOOKING FORM -->
+    <div class="container py-5">
+      <div class="booking-box" data-aos="fade-up">
+        <h2 class="text-warning mb-3 text-center">Book Your Event</h2>
+
+        <input
+          type="text"
+          id="name"
+          class="form-control booking-input mb-3"
+          placeholder="Your Name"
+        />
+
+        <input
+          type="text"
+          id="phone"
+          class="form-control booking-input mb-3"
+          placeholder="Phone Number"
+        />
+
+        <input
+          type="text"
+          id="eventType"
+          class="form-control booking-input mb-3"
+          placeholder="Event Type (Birthday, Party, School Event)"
+        />
+
+        <input type="date" id="date" class="form-control booking-input mb-3" />
+
+        <textarea
+          id="requirements"
+          class="form-control booking-input mb-3"
+          rows="3"
+          placeholder="Requirements (Snacks, Games, Counters)"
+        ></textarea>
+
+        <button onclick="sendWhatsApp()" class="btn btn-warning w-100 mt-3">
+          <i class="bi bi-whatsapp me-2"></i>Book via WhatsApp
+        </button>
+      </div>
+    </div>
+
+    <!-- PAYMENT SECTION -->
+    <div class="container pb-5">
+      <div class="glass-section" data-aos="zoom-in">
+        <h2 class="text-warning text-center mb-3">Payment Options</h2>
+
+        <div class="qr-box mx-auto">
+          <h5 class="text-warning">UPI Payment</h5>
+          <img src="images/upi-qr.png" alt="UPI QR" />
+          <p class="mt-2 text-light">Scan & Pay</p>
+        </div>
+
+        <div class="text-center text-light mt-4">
+          <h5>Or Pay Using UPI ID</h5>
+          <p class="text-warning fs-5">***********@upi</p>
+        </div>
+      </div>
+    </div>
+    <button
+      onclick="generateInvoice()"
+      class="btn btn-outline-warning w-100 mt-3"
+    >
+      <i class="bi bi-file-earmark-pdf me-2"></i>Download Invoice PDF
+    </button>
+
+    <footer
+      class="text-center text-light py-3 bg-black border-top border-warning"
+    >
+      © 2026 Muthu Events | Booking System
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 900 });
+
+      gsap.from(".menu-banner h1", {
+        opacity: 0,
+        y: -50,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+    </script>
+
+    <script>
+      // WHATSAPP BOOKING FUNCTION
+      function sendWhatsApp() {
+        let name = document.getElementById("name").value;
+        let phone = document.getElementById("phone").value;
+        let eventType = document.getElementById("eventType").value;
+        let date = document.getElementById("date").value;
+        let req = document.getElementById("requirements").value;
+
+        let message = `Hello, I want to book an event.%0A%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Event Type: ${eventType}%0A
+Date: ${date}%0A
+Requirements: ${req}%0A%0A
+Please contact me.`;
+
+        let url = `https://wa.me/917502570259?text=${message}`;
+        window.open(url, "_blank");
+      }
+    </script>
+    <script>
+      async function generateInvoice() {
+        const { jsPDF } = window.jspdf;
+
+        let name = document.getElementById("name").value;
+        let phone = document.getElementById("phone").value;
+        let eventType = document.getElementById("eventType").value;
+        let date = document.getElementById("date").value;
+        let req = document.getElementById("requirements").value;
+
+        const doc = new jsPDF();
+
+        doc.setFontSize(22);
+        doc.text("Muthu Events - Booking Invoice", 20, 20);
+
+        doc.setFontSize(14);
+        doc.text(`Name: ${name}`, 20, 40);
+        doc.text(`Phone: ${phone}`, 20, 50);
+        doc.text(`Event Type: ${eventType}`, 20, 60);
+        doc.text(`Date: ${date}`, 20, 70);
+        doc.text(`Requirements:`, 20, 90);
+        doc.text(req, 20, 100);
+
+        doc.setFontSize(12);
+        doc.text("Thank you for choosing Muthu Events!", 20, 130);
+
+        doc.save(`invoice_${name}_${Date.now()}.pdf`);
+      }
+    </script>
+  </body>
+</html>
